@@ -9,7 +9,7 @@ public class PacienteProcessor implements ItemProcessor<Paciente, Paciente> {
 	public Paciente process(Paciente paciente) throws Exception {
 		System.out.println("Processing paciente from the file agenda-consulta.txt: " + paciente);
 		
-		if(paciente.getPercentage() <= 60){
+		if(paciente.getPercentage() < 60){
 			return null;
 		}
 		
